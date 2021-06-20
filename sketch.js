@@ -30,6 +30,7 @@ function draw() {
     spaceCraft.x = random(348,352)
     if(keyDown(LEFT_ARROW)){
       spaceCraft.addImage(craftimg3);
+      
     }
     if(keyDown(RIGHT_ARROW)){
       spaceCraft.addImage(craftimg4);
@@ -40,14 +41,14 @@ function draw() {
     if(keyDown(UP_ARROW)){
       spaceCraft.y = spaceCraft.y-2
     }
-    if(spaceCraft.y === 310){
-      hasDocked = true;
-      fill("pink");
-      textSize(24)
-      text("Docking Successfull!",500,350);
-      console.log("Docking Successfull")
-    }
+    
   }
-  
+  if(spaceCraft.y === 310){
+    hasDocked = true;
+    fill("pink");
+    textSize(24)
+    text("Docking Successfull!",500,350);
+    console.log("Docking Successfull")
+  }
   drawSprites();
 }
